@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用户协议 - TCam</title>
+    <title>Terms of Service - TCam</title>
     <style>
         * {
             margin: 0;
@@ -98,6 +98,10 @@
             margin: 20px 0;
         }
         
+        .lang-zh, .lang-en {
+            display: none;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 24px;
@@ -115,149 +119,315 @@
 </head>
 <body>
     <div class="container">
-        <h1>用户协议</h1>
-        <p class="update-date">最后更新日期：2026年1月22日</p>
-        
-        <p>欢迎使用 TCam（以下简称"本应用"）。在使用本应用之前，请仔细阅读本用户协议（以下简称"本协议"）。使用本应用即表示您同意接受本协议的所有条款。</p>
-        
-        <h2>1. 服务说明</h2>
-        
-        <h3>1.1 应用功能</h3>
-        <p>TCam 是一款特斯拉行车记录仪视频查看和编辑工具，提供以下功能：</p>
-        <ul>
-            <li>读取和播放特斯拉行车记录仪视频</li>
-            <li>多摄像头视角切换和网格显示</li>
-            <li>视频导出和编辑</li>
-            <li>添加时间戳、GPS 位置等水印</li>
-            <li>查看车辆数据（速度、方向盘角度等）</li>
-        </ul>
-        
-        <h3>1.2 订阅服务</h3>
-        <p>本应用提供以下订阅选项：</p>
-        <ul>
-            <li><strong>月度订阅：</strong>按月自动续订</li>
-            <li><strong>年度订阅：</strong>按年自动续订</li>
-            <li><strong>终身买断：</strong>一次性付费，永久使用</li>
-        </ul>
-        
-        <h2>2. 用户责任</h2>
-        
-        <h3>2.1 合法使用</h3>
-        <p>您承诺：</p>
-        <ul>
-            <li>仅将本应用用于合法目的</li>
-            <li>不使用本应用处理非法或侵权内容</li>
-            <li>遵守当地法律法规关于视频录制和使用的规定</li>
-            <li>尊重他人隐私，不未经授权传播他人影像</li>
-        </ul>
-        
-        <h3>2.2 设备要求</h3>
-        <p>使用本应用需要：</p>
-        <ul>
-            <li>iOS 17.0 或更高版本</li>
-            <li>足够的存储空间用于视频处理</li>
-            <li>OTG 转接头（用于连接 U 盘）</li>
-        </ul>
-        
-        <h2>3. 订阅条款</h2>
-        
-        <h3>3.1 付款</h3>
-        <ul>
-            <li>订阅费用将通过您的 Apple ID 账户收取</li>
-            <li>订阅将在当前订阅期结束前 24 小时自动续订</li>
-            <li>续订费用将在当前订阅期结束前 24 小时内收取</li>
-        </ul>
-        
-        <h3>3.2 取消订阅</h3>
-        <ul>
-            <li>您可以随时在 iOS 设置中取消订阅</li>
-            <li>取消订阅将在当前订阅期结束后生效</li>
-            <li>取消后不会退还当前订阅期的费用</li>
-        </ul>
-        
-        <h3>3.3 升级和降级</h3>
-        <ul>
-            <li>您可以随时升级到更高级别的订阅</li>
-            <li>升级将立即生效，并按比例退还剩余时间的费用</li>
-            <li>降级将在当前订阅期结束后生效</li>
-        </ul>
-        
-        <h3>3.4 终身买断</h3>
-        <ul>
-            <li>终身买断为一次性付费</li>
-            <li>购买后永久有效，无需续订</li>
-            <li>不支持退款（除非符合 Apple 退款政策）</li>
-        </ul>
-        
-        <h2>4. 知识产权</h2>
-        
-        <h3>4.1 应用版权</h3>
-        <p>本应用及其所有内容（包括但不限于软件、界面设计、图标、文本）的知识产权归开发者所有。</p>
-        
-        <h3>4.2 用户内容</h3>
-        <p>您对自己创建或处理的视频内容拥有完全的所有权。我们不会声称对您的内容拥有任何权利。</p>
-        
-        <h3>4.3 开源组件</h3>
-        <p>本应用使用了以下开源组件：</p>
-        <ul>
-            <li>FFmpeg（LGPL 许可证）</li>
-            <li>FFmpegKit（LGPL 许可证）</li>
-        </ul>
-        <p>这些组件的源代码可在应用内的"开源许可证"页面查看。</p>
-        
-        <h2>5. 免责声明</h2>
-        
-        <div class="important">
-            <h3>5.1 服务"按原样"提供</h3>
-            <p>本应用按"原样"和"可用"基础提供，不提供任何明示或暗示的保证，包括但不限于：</p>
+        <!-- Chinese Version -->
+        <div class="lang-zh">
+            <h1>用户协议</h1>
+            <p class="update-date">最后更新日期：2026年1月22日</p>
+            
+            <p>欢迎使用 TCam（以下简称"本应用"）。在使用本应用之前，请仔细阅读本用户协议（以下简称"本协议"）。使用本应用即表示您同意接受本协议的所有条款。</p>
+            
+            <h2>1. 服务说明</h2>
+            
+            <h3>1.1 应用功能</h3>
+            <p>TCam 是一款特斯拉行车记录仪视频查看和编辑工具，提供以下功能：</p>
             <ul>
-                <li>适销性</li>
-                <li>特定用途的适用性</li>
-                <li>不侵权</li>
-                <li>无错误或不中断</li>
+                <li>读取和播放特斯拉行车记录仪视频</li>
+                <li>多摄像头视角切换和网格显示</li>
+                <li>视频导出和编辑</li>
+                <li>添加时间戳、GPS 位置等水印</li>
+                <li>查看车辆数据（速度、方向盘角度等）</li>
             </ul>
+            
+            <h3>1.2 订阅服务</h3>
+            <p>本应用提供以下订阅选项：</p>
+            <ul>
+                <li><strong>月度订阅：</strong>按月自动续订</li>
+                <li><strong>年度订阅：</strong>按年自动续订</li>
+                <li><strong>终身买断：</strong>一次性付费，永久使用</li>
+            </ul>
+            
+            <h2>2. 用户责任</h2>
+            
+            <h3>2.1 合法使用</h3>
+            <p>您承诺：</p>
+            <ul>
+                <li>仅将本应用用于合法目的</li>
+                <li>不使用本应用处理非法或侵权内容</li>
+                <li>遵守当地法律法规关于视频录制和使用的规定</li>
+                <li>尊重他人隐私，不未经授权传播他人影像</li>
+            </ul>
+            
+            <h3>2.2 设备要求</h3>
+            <p>使用本应用需要：</p>
+            <ul>
+                <li>iOS 17.0 或更高版本</li>
+                <li>足够的存储空间用于视频处理</li>
+                <li>OTG 转接头（用于连接 U 盘）</li>
+            </ul>
+            
+            <h2>3. 订阅条款</h2>
+            
+            <h3>3.1 付款</h3>
+            <ul>
+                <li>订阅费用将通过您的 Apple ID 账户收取</li>
+                <li>订阅将在当前订阅期结束前 24 小时自动续订</li>
+                <li>续订费用将在当前订阅期结束前 24 小时内收取</li>
+            </ul>
+            
+            <h3>3.2 取消订阅</h3>
+            <ul>
+                <li>您可以随时在 iOS 设置中取消订阅</li>
+                <li>取消订阅将在当前订阅期结束后生效</li>
+                <li>取消后不会退还当前订阅期的费用</li>
+            </ul>
+            
+            <h3>3.3 升级和降级</h3>
+            <ul>
+                <li>您可以随时升级到更高级别的订阅</li>
+                <li>升级将立即生效，并按比例退还剩余时间的费用</li>
+                <li>降级将在当前订阅期结束后生效</li>
+            </ul>
+            
+            <h3>3.4 终身买断</h3>
+            <ul>
+                <li>终身买断为一次性付费</li>
+                <li>购买后永久有效，无需续订</li>
+                <li>不支持退款（除非符合 Apple 退款政策）</li>
+            </ul>
+            
+            <h2>4. 知识产权</h2>
+            
+            <h3>4.1 应用版权</h3>
+            <p>本应用及其所有内容（包括但不限于软件、界面设计、图标、文本）的知识产权归开发者所有。</p>
+            
+            <h3>4.2 用户内容</h3>
+            <p>您对自己创建或处理的视频内容拥有完全的所有权。我们不会声称对您的内容拥有任何权利。</p>
+            
+            <h3>4.3 开源组件</h3>
+            <p>本应用使用了以下开源组件：</p>
+            <ul>
+                <li>FFmpeg（LGPL 许可证）</li>
+                <li>FFmpegKit（LGPL 许可证）</li>
+            </ul>
+            <p>这些组件的源代码可在应用内的"开源许可证"页面查看。</p>
+            
+            <h2>5. 免责声明</h2>
+            
+            <div class="important">
+                <h3>5.1 服务"按原样"提供</h3>
+                <p>本应用按"原样"和"可用"基础提供，不提供任何明示或暗示的保证，包括但不限于：</p>
+                <ul>
+                    <li>适销性</li>
+                    <li>特定用途的适用性</li>
+                    <li>不侵权</li>
+                    <li>无错误或不中断</li>
+                </ul>
+            </div>
+            
+            <h3>5.2 数据丢失</h3>
+            <p>我们建议您在使用本应用前备份重要视频。我们不对因使用本应用导致的数据丢失承担责任。</p>
+            
+            <h3>5.3 硬件兼容性</h3>
+            <p>虽然我们努力确保应用与各种设备兼容，但我们不保证应用在所有设备上都能正常工作。</p>
+            
+            <h2>6. 责任限制</h2>
+            
+            <p>在法律允许的最大范围内，我们不对以下情况承担责任：</p>
+            <ul>
+                <li>使用或无法使用本应用导致的任何直接、间接、偶然、特殊或后果性损害</li>
+                <li>数据丢失或损坏</li>
+                <li>业务中断</li>
+                <li>利润损失</li>
+            </ul>
+            
+            <h2>7. 协议变更</h2>
+            
+            <p>我们保留随时修改本协议的权利。重大变更时，我们会在应用内通知您。继续使用本应用即表示您接受修改后的协议。</p>
+            
+            <h2>8. 终止</h2>
+            
+            <h3>8.1 用户终止</h3>
+            <p>您可以随时停止使用本应用并删除应用来终止本协议。</p>
+            
+            <h3>8.2 开发者终止</h3>
+            <p>如果您违反本协议，我们有权终止您对本应用的访问权限。</p>
+            
+            <h2>9. 适用法律</h2>
+            
+            <p>本协议受中华人民共和国法律管辖。因本协议引起的任何争议应通过友好协商解决。</p>
+            
+            <h2>10. 联系我们</h2>
+            
+            <div class="contact">
+                <p>如果您对本协议有任何疑问，请通过以下方式联系我们：</p>
+                <p><strong>邮箱：</strong><a href="mailto:xudehui_work@163.com">xudehui_work@163.com</a></p>
+            </div>
+            
+            <p style="margin-top: 40px; color: #86868b; font-size: 14px;">感谢您使用 TCam！</p>
         </div>
-        
-        <h3>5.2 数据丢失</h3>
-        <p>我们建议您在使用本应用前备份重要视频。我们不对因使用本应用导致的数据丢失承担责任。</p>
-        
-        <h3>5.3 硬件兼容性</h3>
-        <p>虽然我们努力确保应用与各种设备兼容，但我们不保证应用在所有设备上都能正常工作。</p>
-        
-        <h2>6. 责任限制</h2>
-        
-        <p>在法律允许的最大范围内，我们不对以下情况承担责任：</p>
-        <ul>
-            <li>使用或无法使用本应用导致的任何直接、间接、偶然、特殊或后果性损害</li>
-            <li>数据丢失或损坏</li>
-            <li>业务中断</li>
-            <li>利润损失</li>
-        </ul>
-        
-        <h2>7. 协议变更</h2>
-        
-        <p>我们保留随时修改本协议的权利。重大变更时，我们会在应用内通知您。继续使用本应用即表示您接受修改后的协议。</p>
-        
-        <h2>8. 终止</h2>
-        
-        <h3>8.1 用户终止</h3>
-        <p>您可以随时停止使用本应用并删除应用来终止本协议。</p>
-        
-        <h3>8.2 开发者终止</h3>
-        <p>如果您违反本协议，我们有权终止您对本应用的访问权限。</p>
-        
-        <h2>9. 适用法律</h2>
-        
-        <p>本协议受中华人民共和国法律管辖。因本协议引起的任何争议应通过友好协商解决。</p>
-        
-        <h2>10. 联系我们</h2>
-        
-        <div class="contact">
-            <p>如果您对本协议有任何疑问，请通过以下方式联系我们：</p>
-            <p><strong>邮箱：</strong><a href="mailto:xudehui_work@163.com">xudehui_work@163.com</a></p>
+
+        <!-- English Version -->
+        <div class="lang-en">
+            <h1>Terms of Service</h1>
+            <p class="update-date">Last Updated: January 22, 2026</p>
+            
+            <p>Welcome to TCam (hereinafter referred to as "the App"). Before using the App, please read these Terms of Service (hereinafter referred to as "Terms") carefully. By using the App, you agree to be bound by all terms of this agreement.</p>
+            
+            <h2>1. Service Description</h2>
+            
+            <h3>1.1 App Features</h3>
+            <p>TCam is a Tesla dashcam video viewing and editing tool that provides the following features:</p>
+            <ul>
+                <li>Read and play Tesla dashcam videos</li>
+                <li>Multi-camera view switching and grid display</li>
+                <li>Video export and editing</li>
+                <li>Add watermarks such as timestamps and GPS locations</li>
+                <li>View vehicle data (speed, steering wheel angle, etc.)</li>
+            </ul>
+            
+            <h3>1.2 Subscription Services</h3>
+            <p>The App offers the following subscription options:</p>
+            <ul>
+                <li><strong>Monthly Subscription:</strong> Auto-renews monthly</li>
+                <li><strong>Yearly Subscription:</strong> Auto-renews yearly</li>
+                <li><strong>Lifetime Purchase:</strong> One-time payment, permanent use</li>
+            </ul>
+            
+            <h2>2. User Responsibilities</h2>
+            
+            <h3>2.1 Lawful Use</h3>
+            <p>You agree to:</p>
+            <ul>
+                <li>Use the App only for lawful purposes</li>
+                <li>Not use the App to process illegal or infringing content</li>
+                <li>Comply with local laws and regulations regarding video recording and use</li>
+                <li>Respect others' privacy and not distribute others' images without authorization</li>
+            </ul>
+            
+            <h3>2.2 Device Requirements</h3>
+            <p>Using the App requires:</p>
+            <ul>
+                <li>iOS 17.0 or later</li>
+                <li>Sufficient storage space for video processing</li>
+                <li>OTG adapter (for connecting USB drives)</li>
+            </ul>
+            
+            <h2>3. Subscription Terms</h2>
+            
+            <h3>3.1 Payment</h3>
+            <ul>
+                <li>Subscription fees will be charged to your Apple ID account</li>
+                <li>Subscriptions will auto-renew 24 hours before the end of the current subscription period</li>
+                <li>Renewal fees will be charged within 24 hours before the end of the current subscription period</li>
+            </ul>
+            
+            <h3>3.2 Cancellation</h3>
+            <ul>
+                <li>You can cancel your subscription at any time in iOS Settings</li>
+                <li>Cancellation will take effect after the current subscription period ends</li>
+                <li>No refunds will be provided for the current subscription period after cancellation</li>
+            </ul>
+            
+            <h3>3.3 Upgrades and Downgrades</h3>
+            <ul>
+                <li>You can upgrade to a higher-tier subscription at any time</li>
+                <li>Upgrades take effect immediately with prorated credit for remaining time</li>
+                <li>Downgrades take effect after the current subscription period ends</li>
+            </ul>
+            
+            <h3>3.4 Lifetime Purchase</h3>
+            <ul>
+                <li>Lifetime purchase is a one-time payment</li>
+                <li>Valid permanently after purchase, no renewal required</li>
+                <li>No refunds (unless eligible under Apple's refund policy)</li>
+            </ul>
+            
+            <h2>4. Intellectual Property</h2>
+            
+            <h3>4.1 App Copyright</h3>
+            <p>The intellectual property rights of the App and all its content (including but not limited to software, interface design, icons, text) belong to the developer.</p>
+            
+            <h3>4.2 User Content</h3>
+            <p>You retain full ownership of video content you create or process. We do not claim any rights to your content.</p>
+            
+            <h3>4.3 Open Source Components</h3>
+            <p>The App uses the following open source components:</p>
+            <ul>
+                <li>FFmpeg (LGPL License)</li>
+                <li>FFmpegKit (LGPL License)</li>
+            </ul>
+            <p>Source code for these components can be viewed in the "Open Source Licenses" page within the app.</p>
+            
+            <h2>5. Disclaimer</h2>
+            
+            <div class="important">
+                <h3>5.1 Service Provided "As Is"</h3>
+                <p>The App is provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied, including but not limited to:</p>
+                <ul>
+                    <li>Merchantability</li>
+                    <li>Fitness for a particular purpose</li>
+                    <li>Non-infringement</li>
+                    <li>Error-free or uninterrupted operation</li>
+                </ul>
+            </div>
+            
+            <h3>5.2 Data Loss</h3>
+            <p>We recommend backing up important videos before using the App. We are not responsible for data loss resulting from use of the App.</p>
+            
+            <h3>5.3 Hardware Compatibility</h3>
+            <p>While we strive to ensure the App is compatible with various devices, we do not guarantee the App will work properly on all devices.</p>
+            
+            <h2>6. Limitation of Liability</h2>
+            
+            <p>To the maximum extent permitted by law, we are not liable for:</p>
+            <ul>
+                <li>Any direct, indirect, incidental, special, or consequential damages resulting from use or inability to use the App</li>
+                <li>Data loss or corruption</li>
+                <li>Business interruption</li>
+                <li>Loss of profits</li>
+            </ul>
+            
+            <h2>7. Changes to Terms</h2>
+            
+            <p>We reserve the right to modify these Terms at any time. For significant changes, we will notify you within the App. Continued use of the App indicates your acceptance of the modified Terms.</p>
+            
+            <h2>8. Termination</h2>
+            
+            <h3>8.1 User Termination</h3>
+            <p>You may terminate these Terms at any time by stopping use of the App and deleting it.</p>
+            
+            <h3>8.2 Developer Termination</h3>
+            <p>If you violate these Terms, we reserve the right to terminate your access to the App.</p>
+            
+            <h2>9. Governing Law</h2>
+            
+            <p>These Terms are governed by the laws of the People's Republic of China. Any disputes arising from these Terms shall be resolved through friendly negotiation.</p>
+            
+            <h2>10. Contact Us</h2>
+            
+            <div class="contact">
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <p><strong>Email:</strong> <a href="mailto:xudehui_work@163.com">xudehui_work@163.com</a></p>
+            </div>
+            
+            <p style="margin-top: 40px; color: #86868b; font-size: 14px;">Thank you for using TCam!</p>
         </div>
-        
-        <p style="margin-top: 40px; color: #86868b; font-size: 14px;">感谢您使用 TCam！</p>
     </div>
+
+    <script>
+        // Detect browser language and show appropriate content
+        (function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            var isZh = userLang.toLowerCase().startsWith('zh');
+            
+            if (isZh) {
+                document.querySelector('.lang-zh').style.display = 'block';
+                document.title = '用户协议 - TCam';
+            } else {
+                document.querySelector('.lang-en').style.display = 'block';
+                document.title = 'Terms of Service - TCam';
+            }
+        })();
+    </script>
 </body>
 </html>

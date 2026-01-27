@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCam - 技术支持 | Support</title>
+    <style>
+        :root {
+            --primary-color: #e82127;
+            --bg-dark: #171717;
+            --bg-card: #222222;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-color), #ff4444);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+        
+        .lang-switch {
+            margin-top: 20px;
+        }
+        
+        .lang-switch button {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .lang-switch button.active,
+        .lang-switch button:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .card h2 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 .icon {
+            font-size: 1.2em;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .faq-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .faq-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .faq-item p {
+            color: var(--text-secondary);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        
+        .contact-item .icon {
+            font-size: 1.5em;
+        }
+        
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .requirements-list {
+            list-style: none;
+        }
+        
+        .requirements-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .requirements-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .requirements-list .check {
+            color: #4CAF50;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--text-primary);
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">T</div>
+            <h1>TCam</h1>
+            <p class="subtitle" id="subtitle-zh">Tesla 行车记录仪视频查看与导出工具</p>
+            <p class="subtitle hidden" id="subtitle-en">Tesla Dashcam Video Viewer & Exporter</p>
+            
+            <div class="lang-switch">
+                <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+                <button id="btn-en" onclick="switchLang('en')">English</button>
+            </div>
+        </header>
+        
+        <!-- 中文内容 -->
+        <div id="content-zh">
+            <div class="card">
+                <h2><span class="icon">📧</span> 联系我们</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <strong>技术支持邮箱</strong><br>
+                            <a href="mailto:xudehui_work@163.com">xudehui_work@163.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">⏱️</span>
+                        <div>
+                            <strong>回复时间</strong><br>
+                            通常在 24-48 小时内回复
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><span class="icon">📱</span> 系统要求</h2>
+                <ul class="requirements-list">
+                    <li><span class="check">✓</span> iOS 17.0 或更高版本</li>
+                    <li><span class="check">✓</span> iPhone 或 iPad</li>
+                    <li><span class="check">✓</span> Lightning 或 USB-C 转 USB 转接器</li>
+                    <li><span class="check">✓</span> Tesla 行车记录仪 U 盘</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2><span class="icon">❓</span> 常见问题</h2>
+                
+                <div class="faq-item">
+                    <h3>App 无法识别我的 U 盘？</h3>
+                    <p>请确保使用的是 MFi 认证的转接器。建议使用 Apple 官方的 Lightning to USB 3 转接器或 USB-C to USB 转接器。部分第三方转接器可能存在兼容性问题。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>为什么看不到 B 柱摄像头的视频？</h3>
+                    <p>B 柱摄像头视频仅在搭载 AI4（HW4）硬件的特斯拉车型上可用。老款车型（HW3 及更早）只有 4 个摄像头。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>为什么没有 SEI 数据（速度、GPS 等）？</h3>
+                    <p>SEI 遥测数据需要车机软件版本 2025.44.25 或更高。请检查您的车机是否已更新到该版本。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>导出的视频保存在哪里？</h3>
+                    <p>导出的视频会保存到您的"照片"应用中。首次导出时需要授予相册访问权限。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>如何恢复购买？</h3>
+                    <p>在 App 内进入"设置" → "订阅管理" → "恢复购买"。确保使用的是购买时的 Apple ID。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>如何取消订阅？</h3>
+                    <p>打开 iPhone "设置" → 点击您的 Apple ID → "订阅" → 找到 TCam → "取消订阅"。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- English Content -->
+        <div id="content-en" class="hidden">
+            <div class="card">
+                <h2><span class="icon">📧</span> Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <strong>Support Email</strong><br>
+                            <a href="mailto:xudehui_work@163.com">xudehui_work@163.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">⏱️</span>
+                        <div>
+                            <strong>Response Time</strong><br>
+                            Usually within 24-48 hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><span class="icon">📱</span> System Requirements</h2>
+                <ul class="requirements-list">
+                    <li><span class="check">✓</span> iOS 17.0 or later</li>
+                    <li><span class="check">✓</span> iPhone or iPad</li>
+                    <li><span class="check">✓</span> Lightning-to-USB or USB-C-to-USB adapter</li>
+                    <li><span class="check">✓</span> Tesla Dashcam USB drive</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2><span class="icon">❓</span> FAQ</h2>
+                
+                <div class="faq-item">
+                    <h3>App doesn't recognize my USB drive?</h3>
+                    <p>Make sure you're using an MFi-certified adapter. We recommend Apple's official Lightning to USB 3 Camera Adapter or USB-C to USB Adapter. Some third-party adapters may have compatibility issues.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Why can't I see B-pillar camera videos?</h3>
+                    <p>B-pillar camera videos are only available on Tesla vehicles with AI4 (HW4) hardware. Older vehicles (HW3 and earlier) only have 4 cameras.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Why is there no SEI data (speed, GPS, etc.)?</h3>
+                    <p>SEI telemetry data requires vehicle software version 2025.44.25 or later. Please check if your vehicle has been updated to this version.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Where are exported videos saved?</h3>
+                    <p>Exported videos are saved to your Photos app. You'll need to grant photo library access when exporting for the first time.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I restore my purchase?</h3>
+                    <p>In the app, go to Settings → Subscription → Restore Purchases. Make sure you're using the same Apple ID used for the purchase.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I cancel my subscription?</h3>
+                    <p>Open iPhone Settings → Tap your Apple ID → Subscriptions → Find TCam → Cancel Subscription.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>
+                <a href="https://githubxdh.github.io/tcam-legal/privacy-policy.html" id="privacy-link-zh">隐私政策</a>
+                <span class="hidden" id="privacy-link-en"><a href="https://githubxdh.github.io/tcam-legal/privacy-policy.html">Privacy Policy</a></span>
+                &nbsp;|&nbsp;
+                <a href="https://githubxdh.github.io/tcam-legal/terms-of-service.html" id="terms-link-zh">用户协议</a>
+                <span class="hidden" id="terms-link-en"><a href="https://githubxdh.github.io/tcam-legal/terms-of-service.html">Terms of Service</a></span>
+            </p>
+            <p style="margin-top: 20px;">
+                <span id="disclaimer-zh">Tesla® 是 Tesla, Inc. 的注册商标。本应用为第三方独立开发。</span>
+                <span class="hidden" id="disclaimer-en">Tesla® is a registered trademark of Tesla, Inc. This app is independently developed.</span>
+            </p>
+            <p style="margin-top: 10px;">© 2026 TCam. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        function switchLang(lang) {
+            const zhElements = ['content-zh', 'subtitle-zh', 'privacy-link-zh', 'terms-link-zh', 'disclaimer-zh'];
+            const enElements = ['content-en', 'subtitle-en', 'privacy-link-en', 'terms-link-en', 'disclaimer-en'];
+            
+            if (lang === 'zh') {
+                zhElements.forEach(id => document.getElementById(id)?.classList.remove('hidden'));
+                enElements.forEach(id => document.getElementById(id)?.classList.add('hidden'));
+                document.getElementById('btn-zh').classList.add('active');
+                document.getElementById('btn-en').classList.remove('active');
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                zhElements.forEach(id => document.getElementById(id)?.classList.add('hidden'));
+                enElements.forEach(id => document.getElementById(id)?.classList.remove('hidden'));
+                document.getElementById('btn-en').classList.add('active');
+                document.getElementById('btn-zh').classList.remove('active');
+                document.documentElement.lang = 'en';
+            }
+            
+            localStorage.setItem('tcam-lang', lang);
+        }
+        
+        // Auto-detect language on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('tcam-lang');
+            if (savedLang) {
+                switchLang(savedLang);
+            } else {
+                const browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang.startsWith('zh')) {
+                    switchLang('zh');
+                } else {
+                    switchLang('en');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

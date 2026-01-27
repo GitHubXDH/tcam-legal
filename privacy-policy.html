@@ -115,7 +115,7 @@
         <!-- Chinese Version -->
         <div class="lang-zh">
             <h1>隐私政策</h1>
-            <p class="update-date">最后更新日期：2026年1月22日</p>
+            <p class="update-date">最后更新日期：2026年1月27日</p>
             
             <p>欢迎使用 TCam（以下简称"本应用"）。我们非常重视您的隐私保护和个人信息安全。本隐私政策将帮助您了解我们如何收集、使用、存储和保护您的信息。</p>
             
@@ -297,17 +297,32 @@
 
     <script>
         // Detect browser language and show appropriate content
+        var currentLang = 'en'; // Default
+        
+        function toggleLanguage() {
+            var newLang = currentLang === 'zh' ? 'en' : 'zh';
+            setLanguage(newLang);
+        }
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            if (lang === 'zh') {
+                document.querySelector('.lang-zh').style.display = 'block';
+                document.querySelector('.lang-en').style.display = 'none';
+                document.title = '隐私政策 - TCam';
+                document.querySelector('.lang-switch').textContent = 'Switch to English';
+            } else {
+                document.querySelector('.lang-zh').style.display = 'none';
+                document.querySelector('.lang-en').style.display = 'block';
+                document.title = 'Privacy Policy - TCam';
+                document.querySelector('.lang-switch').textContent = '切换到中文';
+            }
+        }
+
         (function() {
             var userLang = navigator.language || navigator.userLanguage;
             var isZh = userLang.toLowerCase().startsWith('zh');
-            
-            if (isZh) {
-                document.querySelector('.lang-zh').style.display = 'block';
-                document.title = '隐私政策 - TCam';
-            } else {
-                document.querySelector('.lang-en').style.display = 'block';
-                document.title = 'Privacy Policy - TCam';
-            }
+            setLanguage(isZh ? 'zh' : 'en');
         })();
     </script>
 </body>

@@ -122,7 +122,7 @@
         <!-- Chinese Version -->
         <div class="lang-zh">
             <h1>用户协议</h1>
-            <p class="update-date">最后更新日期：2026年1月22日</p>
+            <p class="update-date">最后更新日期：2026年1月27日</p>
             
             <p>欢迎使用 TCam（以下简称"本应用"）。在使用本应用之前，请仔细阅读本用户协议（以下简称"本协议"）。使用本应用即表示您同意接受本协议的所有条款。</p>
             
@@ -350,14 +350,6 @@
             <h3>4.2 User Content</h3>
             <p>You retain full ownership of video content you create or process. We do not claim any rights to your content.</p>
             
-            <h3>4.3 Open Source Components</h3>
-            <p>The App uses the following open source components:</p>
-            <ul>
-                <li>FFmpeg (LGPL License)</li>
-                <li>FFmpegKit (LGPL License)</li>
-            </ul>
-            <p>Source code for these components can be viewed in the "Open Source Licenses" page within the app.</p>
-            
             <h2>5. Disclaimer</h2>
             
             <div class="important">
@@ -409,6 +401,18 @@
                 <p>If you have any questions about these Terms, please contact us:</p>
                 <p><strong>Email:</strong> <a href="mailto:xudehui_work@163.com">xudehui_work@163.com</a></p>
             </div>
+
+            <h2>11. Additional Terms Required by Apple</h2>
+            <p>As an iOS app, the following terms supplement this agreement:</p>
+            <ul>
+                <li><strong>Acknowledgement:</strong> This agreement is between you and the Developer, not Apple. Apple is not responsible for the App or its content.</li>
+                <li><strong>Maintenance and Support:</strong> The Developer is responsible for providing maintenance and support services. Apple has no obligation to furnish any maintenance and support services.</li>
+                <li><strong>Warranty:</strong> In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever.</li>
+                <li><strong>Product Claims:</strong> The Developer, not Apple, is responsible for addressing any claims by you or any third party relating to the App.</li>
+                <li><strong>Intellectual Property Rights:</strong> In the event of any third party claim that the App infringes that third party's intellectual property rights, the Developer will be solely responsible for the investigation, defense, settlement and discharge of any such intellectual property infringement claim.</li>
+                <li><strong>Legal Compliance:</strong> You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.</li>
+                <li><strong>Third Party Beneficiary:</strong> Apple, and Apple's subsidiaries, are third party beneficiaries of this agreement. Upon your acceptance of this agreement, Apple will have the right to enforce this agreement against you as a third party beneficiary thereof.</li>
+            </ul>
             
             <p style="margin-top: 40px; color: #86868b; font-size: 14px;">Thank you for using TCam!</p>
         </div>
@@ -416,9 +420,36 @@
 
     <script>
         // Detect browser language and show appropriate content
+        var currentLang = 'en'; // Default
+        
+        function toggleLanguage() {
+            var newLang = currentLang === 'zh' ? 'en' : 'zh';
+            setLanguage(newLang);
+        }
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            if (lang === 'zh') {
+                document.querySelector('.lang-zh').style.display = 'block';
+                document.querySelector('.lang-en').style.display = 'none';
+                document.title = '用户协议 - TCam';
+                document.querySelector('.lang-switch').textContent = 'Switch to English';
+            } else {
+                document.querySelector('.lang-zh').style.display = 'none';
+                document.querySelector('.lang-en').style.display = 'block';
+                document.title = 'Terms of Service - TCam';
+                document.querySelector('.lang-switch').textContent = '切换到中文';
+            }
+        }
+
         (function() {
             var userLang = navigator.language || navigator.userLanguage;
             var isZh = userLang.toLowerCase().startsWith('zh');
+            setLanguage(isZh ? 'zh' : 'en');
+        })();
+    </script>
+</body>
+</html>
             
             if (isZh) {
                 document.querySelector('.lang-zh').style.display = 'block';
